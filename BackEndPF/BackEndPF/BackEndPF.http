@@ -1,0 +1,6 @@
+@BackEndPF_HostAddress = http://localhost:5256
+
+GET {{BackEndPF_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
