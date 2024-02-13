@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTattoo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="./login.html">WebTattoo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./login.html">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <form id="clienteForm" class="login border p-5 rounded mx-auto">
+        <h2 class="fontC mb-5">Cadastro de Cliente</h2>
+        <div class="form-group ">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" class="form-control" id="password" placeholder="Digite sua Senha" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Idade:</label>
+            <input type="text" class="form-control" id="age" placeholder="Digite sua Idade" required>
+        </div>
+        <div class="form-group">
+            <label for="cpf">Cpf:</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Digite sua Cpf" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" placeholder="Digite sua Email" required>
+        </div>
+        <div class="form-group">
+            <label for="telefone">Fone:</label>
+            <input type="text" class="form-control" id="telefone" placeholder="Digite sua Fone" required>
+        </div>
+
+        <button type="submit" onclick="cadastrarUsuario()" class="btn btn-primary ent">Cadastrar Cliente</button>
+        <a href="./loginClientes.html" class="btn btn-danger  ent">Voltar</a>
+
+    </form>
+</body>
+    <script>
+    async function cadastrarUsuario()
+    { 
+
+        event.preventDefault();
+      let obj =
+        {
+            nome: document.getElementById("name").value,
+            senha: document.getElementById("password").value,
+            idade: document.getElementById('age').value,    
+            cpf: document.getElementById("cpf").value,
+            email: document.getElementById("email").value,
+            fone: document.getElementById("telefone").value
+        }
+        console.log( JSON.stringify(obj))
+        await fetch('http://localhost:5256/api/Clientes', {
+        method: "POST",
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify(obj)
+        });
+
+      }
+    </script>
+
+</html>

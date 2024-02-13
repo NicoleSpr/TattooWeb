@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário - TattooWeb</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0PaUkEC3WIkwL3fbcvEVi0E9cL3JrL2vVMjaAz0x3TMvuxqJXyf3w3hzzvS6v+E" crossorigin="anonymous">
+   <link rel="stylesheet" href="./home.html">
+   <style>
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .card-img-top {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">TattooWeb</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- Foto de Perfil -->
+                    <img src="perfil.jpg" class="card-img-top profile-image" alt="Foto de Perfil">
+                    <div class="card-body">
+                        <h5 class="card-title">Minha Biografia</h5>
+                        <!-- Biografia -->
+                        <p id="biography" class="card-text">Adicione sua biografia aqui...</p>
+                        <!-- Botão para editar biografia -->
+                        <button id="edit-biography-btn" class="btn btn-primary">Editar Biografia</button>
+                        <!-- Input para escolher foto de perfil -->
+                        <input type="file" id="profile-image-input" style="display: none;">
+                        <!-- Botão para escolher foto de perfil -->
+                        <button id="choose-profile-image-btn" class="btn btn-secondary mt-3">Escolher Foto de Perfil</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="mb-4">Minhas Fotos</h2>
+                <div class="row" id="post-container">
+                    <!-- Espaço para as postagens -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-60PnNz/4M6Q/KEjgXsG/J9mVepNc41beJhL2j2VPrp6q68qCqGpfBECVdkPtya6E" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-ekO5eXxwTLufCR7H1m2hlJ06jKtcxZSS+EsT+qlJwWbXEaTxzPlYz9BpuZls6vcv" crossorigin="anonymous"></script>
+
+    <script>
+        // Função para adicionar postagem ao feed do usuário
+        function addPost(imageUrl) {
+            const postContainer = document.getElementById('post-container');
+
+            const cardHtml = `
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="${imageUrl}" class="card-img-top" alt="...">
+                    </div>
+                </div>`;
+
+            // Adiciona a nova postagem ao final do container de postagens
+            postContainer.insertAdjacentHTML('beforeend', cardHtml);
+        }
+
+        // Simulação de fotos postadas pelo usuário
+        const sampleImages = [
+            'image1.jpg',
+            'image2.jpg',
+            'image3.jpg'
+        ];
+
+        // Adiciona as fotos de exemplo ao carregar a página
+        window.addEventListener('load', function() {
+            sampleImages.forEach(function(imageUrl) {
+                addPost(imageUrl);
+            });
+        });
+
+        // Evento de clique no botão para editar biografia
+        document.getElementById('edit-biography-btn').addEventListener('click', function() {
+            const newBiography = prompt('Digite sua nova biografia:');
+            if (newBiography !== null) {
+                document.getElementById('biography').textContent = newBiography;
+            }
+        });
+
+        // Evento de clique no botão para escolher foto de perfil
+        document.getElementById('choose-profile-image-btn').addEventListener('click', function() {
+            document.getElementById('profile-image-input').click();
+        });
+
+        // Evento de mudança no input de escolher foto de perfil
+        document.getElementById('profile-image-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imageUrl = event.target.result;
+                    document.querySelector('.profile-image').src = imageUrl;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TattooWeb</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <form id="tatuadorForm" class="login border p-5 rounded mx-auto">
+        <h2 class="fontC mb-5">Para acessar nosso site é preciso ter 18 anos ou mais.</h2>
+        <div class="form-group ">
+            <h4>Você é de maior?</h4>
+        </div>
+        <div class="form-group">
+            <a href="./loginClientes.html" class="btn btn-success text-decoration">
+                Sim
+            </a>
+        </div>
+        <div class="form-group ">
+                <button type="submit" onclick="alerta()" class="btn btn-success text-decoration">Não</button>
+        </div>
+    </form>
+    <script>
+        function alerta() {
+            alert("Você precisa ser maior de idade!");
+        }
+//         window.onload = function() {
+//     // URL para onde você deseja redirecionar
+//     var url = "https://www.exemplo.com/link-especifico";
+
+//     // Redirecionamento automático
+//     window.location.href = url;
+// }
+    </script>
+</body>
+
+</html>

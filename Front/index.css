@@ -1,0 +1,64 @@
+body {
+    background: url("https://c.wallhere.com/photos/54/ee/black_background_pattern_light_texture-661919.jpg!d");
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #ffffff;
+    /* font-family: 'Dancing Script', cursive; */
+
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.login {
+    margin-top: 6%;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.671);
+
+}
+
+.btn {
+    margin-left: 20px;
+    width: 300px;
+    font-size: 18px;
+
+}
+
+.fontC {
+    font-size: 35px;
+}
+
+/* .nav:hover{
+    width: 1000px;
+} */
+.navbar-brand {
+    font-size: 30px; /* Ajuste o tamanho de acordo com suas necessidades */
+}
+.text-decoration{
+    text-decoration: none;
+    color:white;
+    margin:6px;
+}
+.cadastro{
+    margin: 20px;
+}
+.cad{
+    margin-top: 50px;
+    text-align: center;
+}
+.ent{
+    margin-top: 10px;
+}
