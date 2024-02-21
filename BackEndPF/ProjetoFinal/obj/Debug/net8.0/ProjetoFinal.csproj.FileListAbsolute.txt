@@ -1,0 +1,7 @@
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.csproj.AssemblyReference.cache
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.AssemblyInfoInputs.cache
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.AssemblyInfo.cs
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.csproj.CoreCompileInputs.cache
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nicole.spranger\source\repos\ProjetoFinal\ProjetoFinal\obj\Debug\net8.0\ProjetoFinal.MvcApplicationPartsAssemblyInfo.cache
