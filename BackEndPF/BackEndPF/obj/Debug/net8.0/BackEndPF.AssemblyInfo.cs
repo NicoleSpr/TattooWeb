@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackEndPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5f4016e750142d4ff0fc9443dc62b3823f6a63e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackEndPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackEndPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
